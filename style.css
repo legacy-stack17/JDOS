@@ -1,0 +1,106 @@
+/* ===== COLORES: cámbialos aquí para igualarlos al escudo del instituto ===== */
+:root{
+  --azul:#17406B;      /* color principal */
+  --azul-oscuro:#0F2C4B;
+  --amarillo:#F2B632;  /* color de acento */
+  --fondo:#F6F8FA;
+  --papel:#FFFFFF;
+  --texto:#1D2733;
+  --suave:#5B6775;
+  --linea:#D9E0E7;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:var(--sans);color:var(--texto);background:var(--fondo);line-height:1.6;font-size:1.0625rem}
+a{color:var(--azul)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--amarillo);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* Barra superior */
+header.top{position:sticky;top:0;z-index:5;background:var(--azul-oscuro);color:#fff}
+header.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 24px;padding-top:10px;padding-bottom:10px}
+.marca{font-family:var(--serif);font-weight:700;font-size:1.05rem;color:#fff;text-decoration:none}
+nav a{color:#E8EEF4;text-decoration:none;margin-right:18px;font-size:.98rem}
+nav a:last-child{margin-right:0}
+nav a:hover{color:var(--amarillo)}
+
+/* Portada */
+.hero{background:var(--azul);color:#fff;padding:64px 0 72px;border-bottom:8px solid var(--amarillo)}
+.hero .wrap{display:grid;grid-template-columns:1fr 230px;gap:40px;align-items:center}
+.hero h1{font-family:var(--serif);font-size:clamp(2.1rem,5.5vw,3.6rem);line-height:1.1;margin:0 0 18px;letter-spacing:-.01em}
+.hero p{font-size:1.25rem;max-width:34ch;margin:0 0 28px;color:#E3ECF5}
+.boton{display:inline-block;background:var(--amarillo);color:var(--azul-oscuro);font-weight:700;padding:12px 22px;border-radius:6px;text-decoration:none}
+.boton:hover{background:#fff}
+.escudo{width:230px;height:230px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--suave);font-size:.9rem;padding:24px;overflow:hidden}
+.escudo img{width:100%;height:100%;object-fit:contain}
+
+/* Secciones */
+section{padding:64px 0}
+section+section{border-top:1px solid var(--linea)}
+h2{font-family:var(--serif);font-size:clamp(1.6rem,3.6vw,2.2rem);margin:0 0 22px;color:var(--azul-oscuro)}
+h3{font-family:var(--serif);margin:0 0 8px;font-size:1.25rem;color:var(--azul)}
+.texto{max-width:68ch}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:36px}
+.dos>div{border-left:5px solid var(--amarillo);padding-left:20px}
+.dos p{margin:0}
+
+/* Oferta educativa */
+.oferta{list-style:none;margin:0;padding:0;max-width:760px}
+.oferta li{display:grid;grid-template-columns:190px 1fr;gap:6px 28px;padding:20px 0;border-top:1px solid var(--linea)}
+.oferta li:last-child{border-bottom:1px solid var(--linea)}
+.oferta strong{font-family:var(--serif);font-size:1.15rem;color:var(--azul)}
+.oferta span{color:var(--suave)}
+
+/* Galería */
+.texto+.galeria{margin-top:28px}
+.galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0;padding:0;list-style:none}
+.galeria figure{margin:0}
+.foto{aspect-ratio:4/3;background:linear-gradient(135deg,#DCE6F0,#C5D5E5);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--suave);font-size:.95rem;overflow:hidden}
+.foto img{width:100%;height:100%;object-fit:cover;display:block}
+a.foto{text-decoration:none}
+a.foto:hover img{opacity:.9}
+.galeria .texto{margin-bottom:0}
+.galeria figcaption{font-size:.92rem;color:var(--suave);padding-top:6px}
+
+/* Contacto */
+.contacto{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contacto dl{margin:0}
+.contacto dt{font-weight:700;color:var(--azul-oscuro);margin-top:14px}
+.contacto dt:first-child{margin-top:0}
+.contacto dd{margin:2px 0 0;color:var(--suave)}
+.caja{background:var(--papel);border:1px solid var(--linea);border-radius:8px;padding:24px}
+.caja p{margin:0 0 16px}
+
+footer{background:var(--azul-oscuro);color:#C9D6E3;padding:26px 0;font-size:.95rem}
+footer p{margin:0}
+
+@media (max-width:760px){
+  .hero .wrap{grid-template-columns:1fr}
+  .escudo{width:150px;height:150px;order:-1}
+  .dos,.contacto{grid-template-columns:1fr;gap:28px}
+  .oferta li{grid-template-columns:1fr}
+  .galeria{grid-template-columns:repeat(2,1fr)}
+  section{padding:48px 0}
+}
+
+/* Fotos ampliadas (solo CSS, se abren con :target) */
+.visor{display:none;position:fixed;inset:0;z-index:20;background:rgba(10,20,40,.95);align-items:center;justify-content:center;padding:64px 64px 24px}
+.visor:target{display:flex}
+.visor-fondo{position:absolute;inset:0}
+.visor-fig{position:relative;margin:0;max-width:100%;max-height:100%;display:flex;flex-direction:column;align-items:center}
+.visor-fig img{max-width:100%;max-height:calc(100vh - 140px);border-radius:4px;display:block}
+.visor-fig figcaption{color:#fff;padding-top:12px;font-size:1rem}
+.visor-cerrar,.visor-ant,.visor-sig{position:absolute;text-decoration:none;text-align:center}
+.visor-cerrar{top:14px;right:16px;background:var(--amarillo);color:var(--azul-oscuro);font-weight:700;padding:10px 18px;border-radius:6px}
+.visor-cerrar:hover{background:#fff}
+.visor-ant,.visor-sig{top:50%;transform:translateY(-50%);width:48px;height:64px;line-height:62px;background:rgba(255,255,255,.14);color:#fff;font-size:2.2rem;border-radius:6px}
+.visor-ant{left:8px}
+.visor-sig{right:8px}
+.visor-ant:hover,.visor-sig:hover{background:rgba(255,255,255,.3)}
+@media (max-width:760px){
+  .visor{padding:60px 8px 16px}
+  .visor-ant,.visor-sig{width:40px;height:52px;line-height:50px;top:auto;bottom:10px;transform:none}
+}

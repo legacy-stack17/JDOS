@@ -83,11 +83,15 @@ footer p{margin:0}
   .dos,.contacto{grid-template-columns:1fr;gap:28px}
   .oferta li{grid-template-columns:1fr}
   .galeria{grid-template-columns:repeat(2,1fr)}
+  .galeria li:first-child{grid-column:1/-1}
+  header.top{position:static}
+  .wrap{padding:0 16px}
+  .hero{padding:44px 0 52px}
   section{padding:48px 0}
 }
 
 /* Fotos ampliadas (solo CSS, se abren con :target) */
-.visor{display:none;position:fixed;inset:0;z-index:20;background:rgba(10,20,40,.95);align-items:center;justify-content:center;padding:64px 64px 24px}
+.visor{display:none;position:fixed;inset:0;z-index:20;background:#0A1428;align-items:center;justify-content:center;padding:64px 64px 24px}
 .visor:target{display:flex}
 .visor-fondo{position:absolute;inset:0}
 .visor-fig{position:relative;margin:0;max-width:100%;max-height:100%;display:flex;flex-direction:column;align-items:center}

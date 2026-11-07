@@ -1,8 +1,7 @@
-/* ===== COLORES: cámbialos aquí para igualarlos al escudo del instituto ===== */
 :root{
-  --azul:#17406B;      /* color principal */
+  --azul:#17406B;      
   --azul-oscuro:#0F2C4B;
-  --amarillo:#F2B632;  /* color de acento */
+  --amarillo:#F2B632;  
   --fondo:#F6F8FA;
   --papel:#FFFFFF;
   --texto:#1D2733;
@@ -19,7 +18,7 @@ a{color:var(--azul)}
 a:focus-visible,button:focus-visible{outline:3px solid var(--amarillo);outline-offset:3px}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
 
-/* Barra superior */
+
 header.top{position:sticky;top:0;z-index:5;background:var(--azul-oscuro);color:#fff}
 header.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:6px 24px;padding-top:10px;padding-bottom:10px}
 .marca{font-family:var(--serif);font-weight:700;font-size:1.05rem;color:#fff;text-decoration:none}
@@ -27,7 +26,7 @@ nav a{color:#E8EEF4;text-decoration:none;margin-right:18px;font-size:.98rem}
 nav a:last-child{margin-right:0}
 nav a:hover{color:var(--amarillo)}
 
-/* Portada */
+
 .hero{background:var(--azul);color:#fff;padding:64px 0 72px;border-bottom:8px solid var(--amarillo)}
 .hero .wrap{display:grid;grid-template-columns:1fr 230px;gap:40px;align-items:center}
 .hero h1{font-family:var(--serif);font-size:clamp(2.1rem,5.5vw,3.6rem);line-height:1.1;margin:0 0 18px;letter-spacing:-.01em}
@@ -37,7 +36,7 @@ nav a:hover{color:var(--amarillo)}
 .escudo{width:230px;height:230px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--suave);font-size:.9rem;padding:24px;overflow:hidden}
 .escudo img{width:100%;height:100%;object-fit:contain}
 
-/* Secciones */
+
 section{padding:64px 0}
 section+section{border-top:1px solid var(--linea)}
 h2{font-family:var(--serif);font-size:clamp(1.6rem,3.6vw,2.2rem);margin:0 0 22px;color:var(--azul-oscuro)}
@@ -47,14 +46,14 @@ h3{font-family:var(--serif);margin:0 0 8px;font-size:1.25rem;color:var(--azul)}
 .dos>div{border-left:5px solid var(--amarillo);padding-left:20px}
 .dos p{margin:0}
 
-/* Oferta educativa */
+
 .oferta{list-style:none;margin:0;padding:0;max-width:760px}
 .oferta li{display:grid;grid-template-columns:190px 1fr;gap:6px 28px;padding:20px 0;border-top:1px solid var(--linea)}
 .oferta li:last-child{border-bottom:1px solid var(--linea)}
 .oferta strong{font-family:var(--serif);font-size:1.15rem;color:var(--azul)}
 .oferta span{color:var(--suave)}
 
-/* Galería */
+
 .texto+.galeria{margin-top:28px}
 .galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0;padding:0;list-style:none}
 .galeria figure{margin:0}
@@ -65,7 +64,7 @@ a.foto:hover img{opacity:.9}
 .galeria .texto{margin-bottom:0}
 .galeria figcaption{font-size:.92rem;color:var(--suave);padding-top:6px}
 
-/* Contacto */
+
 .contacto{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .contacto dl{margin:0}
 .contacto dt{font-weight:700;color:var(--azul-oscuro);margin-top:14px}
@@ -90,7 +89,7 @@ footer p{margin:0}
   section{padding:48px 0}
 }
 
-/* Fotos ampliadas (solo CSS, se abren con :target) */
+
 .visor{display:none;position:fixed;inset:0;z-index:20;background:#0A1428;align-items:center;justify-content:center;padding:64px 64px 24px}
 .visor:target{display:flex}
 .visor-fondo{position:absolute;inset:0}

@@ -24,7 +24,6 @@ header.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:
 nav a{color:#E8EEF4;text-decoration:none;margin-right:18px;font-size:.98rem}
 nav a:last-child{margin-right:0}
 nav a:hover{color:var(--amarillo)}
-.menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;font-size:1.4rem;line-height:1;padding:6px 12px;border-radius:6px;cursor:pointer}
 
 .hero{background:var(--azul);color:#fff;padding:64px 0 72px;border-bottom:8px solid var(--amarillo)}
 .hero .wrap{display:grid;grid-template-columns:1fr 230px;gap:40px;align-items:center}
@@ -60,6 +59,7 @@ a.foto{text-decoration:none}
 a.foto:hover img{opacity:.9}
 .galeria figcaption{font-size:.92rem;color:var(--suave);padding-top:6px}
 
+.sub{margin:44px 0 12px;font-size:1.4rem}
 .faq{max-width:760px}
 details{border-top:1px solid var(--linea)}
 details:last-child{border-bottom:1px solid var(--linea)}
@@ -80,10 +80,8 @@ footer{background:var(--azul-oscuro);color:#C9D6E3;padding:26px 0;font-size:.95r
 footer p{margin:0}
 
 @media (max-width:760px){
-  .menu-btn{display:block}
-  nav#menu{display:none;width:100%}
-  nav#menu.abierto{display:flex;flex-direction:column}
-  nav#menu a{margin:0;padding:12px 0;border-top:1px solid rgba(255,255,255,.15)}
+  header.top{position:static}
+  nav a{display:inline-block;margin:0 16px 0 0;padding:4px 0}
   .hero .wrap{grid-template-columns:1fr}
   .escudo{width:150px;height:150px;order:-1}
   .dos,.contacto{grid-template-columns:1fr;gap:28px}

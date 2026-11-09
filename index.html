@@ -16,6 +16,8 @@
       <a href="#quienes-somos">Quiénes somos</a>
       <a href="#oferta">Oferta educativa</a>
       <a href="#matricula">Matrícula</a>
+      <!-- Quita los comentarios de la línea de Noticias cuando actives la sección de noticias:
+      <a href="#noticias">Noticias</a> -->
       <a href="#galeria">Galería</a>
       <a href="#contacto">Contacto</a>
     </nav>
@@ -76,7 +78,8 @@
   <section id="matricula">
     <div class="wrap">
       <h2>Matrícula</h2>
-      <p class="texto">Para matricular a tu hijo o hija, presenta estos documentos en el instituto:</p>
+      <h3 class="subtitulo">Requisitos para matrícula de nuevo ingreso y reingreso</h3>
+      <p class="texto">Para matricular a tu hijo o hija, ya sea de nuevo ingreso o de reingreso, presenta estos documentos en el instituto:</p>
       <ul class="oferta">
         <li>
           <strong>Partida de nacimiento</strong>
@@ -88,10 +91,13 @@
         </li>
         <li>
           <strong>Hoja de traslado</strong>
-          <span>Del centro donde estuidaban antes, en original</span>
+          <span>Del centro donde estudiaba antes, en original.</span>
         </li>
       </ul>
-      <!-- Fechas y pasos de matrícula: agregar solo con datos confirmados por la dirección. -->
+      <div class="aviso">
+        <p><strong>¿Dudas sobre la matrícula?</strong> Llama al 8465 0711 o visítanos en el horario de atención: de 12:15 p. m. a 5:15 p. m.</p>
+      </div>
+
       <h3 class="sub">Preguntas frecuentes</h3>
       <div class="faq">
         <details>
@@ -104,7 +110,7 @@
         </details>
         <details>
           <summary>¿Qué documentos necesito para matricular?</summary>
-          <p>Partida de nacimiento, copia de cédula de los padres y el expediente completo del estudiante.</p>
+          <p>Partida de nacimiento, copia de cédula de los padres y hoja de traslado del centro donde estudiaba antes, en original.</p>
         </details>
         <details>
           <summary>¿Cuál es el horario de atención?</summary>
@@ -150,9 +156,20 @@
           <a class="boton" href="https://www.facebook.com/share/1Bbfr1nvLN/?mibextid=wwXIfr" target="_blank" rel="noopener">Ir a la página de Facebook</a>
         </div>
       </div>
+      <form class="formulario" id="form-contacto" novalidate>
+        <h3>Escríbenos</h3>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" autocomplete="name">
+        <label for="telefono">Teléfono (opcional)</label>
+        <input type="tel" id="telefono" name="telefono" autocomplete="tel">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje"></textarea>
+        <button class="boton" type="submit">Enviar por WhatsApp</button>
+        <p class="estado" id="form-estado" role="status"></p>
+      </form>
       <!-- Para un mapa exacto: Google Maps > buscar el instituto > Compartir > Insertar un mapa > copiar el src del iframe. -->
       <div class="mapa">
-       <iframe title="Mapa de ubicación del instituto en Santa Bárbara, Jalapa" src="https://www.google.com/maps?q=13.810749370954609,-86.2031040649859&z=17&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <iframe title="Mapa de ubicación del instituto en Santa Bárbara, Jalapa" src="https://www.google.com/maps?q=13.810749370954609,-86.2031040649859&z=17&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -249,11 +266,14 @@
     <a class="visor-sig" href="#foto-2026" aria-label="Foto siguiente">&#8250;</a>
   </div>
 
+<a class="whatsapp" href="https://wa.me/50584650711?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20instituto." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">&#128172; WhatsApp</a>
+
 <footer>
   <div class="wrap">
     <p>© 2026 Instituto Público José Daniel Ortega Saavedra</p>
   </div>
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>

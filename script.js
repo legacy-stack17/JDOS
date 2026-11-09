@@ -1,5 +1,5 @@
 
-const WHATSAPP = '50584650711';
+const WHATSAPP = '50584950711';
 const form = document.getElementById('form-contacto');
 const estado = document.getElementById('form-estado');
 

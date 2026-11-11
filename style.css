@@ -1,71 +1,952 @@
+
+/* =========================================
+   INSTITUTO PUBLICO JOSE DANIEL ORTEGA SAAVEDRA
+   DISEÑO ORIGINAL + RESPONSIVE
+========================================= */
+
+/* VARIABLES */
+:root {
+  --azul: #17406B;
+  --azul-oscuro: #0F2C4B;
+  --amarillo: #F2B632;
+  --fondo: #F6F8FA;
+  --papel: #FFFFFF;
+  --texto: #1D2733;
+  --suave: #5B6775;
+  --linea: #D9E0E7;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* CONFIGURACION GENERAL */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--sans);
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrap {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* =========================================
+   MENU DE NAVEGACION
+========================================= */
+
 header.top {
-    background: var(--azul-oscuro);
-    color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--azul-oscuro);
+  color: #FFFFFF;
+}
+
+header.top .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .marca {
-    color: #FFFFFF;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
 }
 
 nav a {
-    color: #E8EEF4;
+  color: #E8EEF4;
+  text-decoration: none;
+  font-size: .98rem;
+}
+
+nav a:last-child {
+  margin-right: 0;
 }
 
 nav a:hover {
-    color: var(--amarillo);
+  color: var(--amarillo);
 }
 
-/* Portada */
+/* =========================================
+   PORTADA PRINCIPAL
+========================================= */
+
 .hero {
-    background: var(--azul);
-    color: #FFFFFF;
-    border-bottom: 8px solid var(--amarillo);
+  background: var(--azul);
+  color: #FFFFFF;
+  padding: 64px 0 72px;
+  border-bottom: 8px solid var(--amarillo);
+}
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1fr 230px;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-size: clamp(2.1rem, 5.5vw, 3.6rem);
+  line-height: 1.1;
+  margin: 0 0 18px;
+  letter-spacing: -.01em;
 }
 
 .hero p {
-    color: #E3ECF5;
+  font-size: 1.25rem;
+  max-width: 34ch;
+  margin: 0 0 28px;
+  color: #E3ECF5;
 }
 
-/* Botones */
 .boton {
-    background: var(--amarillo);
-    color: var(--azul-oscuro);
+  display: inline-block;
+  background: var(--amarillo);
+  color: var(--azul-oscuro);
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
 }
 
 .boton:hover {
-    background: #FFFFFF;
-    color: var(--azul-oscuro);
+  background: #FFFFFF;
 }
 
-/* Escudo */
 .escudo {
-    background: #FFFFFF;
-    color: var(--suave);
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--suave);
+  font-size: .9rem;
+  padding: 24px;
+  overflow: hidden;
 }
 
-/* Fondo general */
-body {
-    background: var(--fondo);
-    color: var(--texto);
+.escudo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-/* Títulos */
+/* =========================================
+   SECCIONES GENERALES
+========================================= */
+
+section {
+  padding: 64px 0;
+}
+
+section + section {
+  border-top: 1px solid var(--linea);
+}
+
 h2 {
-    color: var(--azul-oscuro);
+  font-family: var(--serif);
+  font-size: clamp(1.6rem, 3.6vw, 2.2rem);
+  margin: 0 0 22px;
+  color: var(--azul-oscuro);
 }
 
 h3 {
-    color: var(--azul);
+  font-family: var(--serif);
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  color: var(--azul);
 }
 
-/* Pie de página */
-footer {
-    background: var(--azul-oscuro);
-    color: #C9D6E3;
+p {
+  line-height: 1.6;
 }
 
-/* WhatsApp */
+.texto {
+  max-width: 68ch;
+}
+
+/* =========================================
+   MISION Y VISION
+========================================= */
+
+.dos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 36px;
+}
+
+.dos > div {
+  border-left: 5px solid var(--amarillo);
+  padding-left: 20px;
+}
+
+.dos p {
+  margin: 0;
+}
+
+/* =========================================
+   OFERTA EDUCATIVA Y MATRICULA
+========================================= */
+
+.oferta {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 760px;
+}
+
+.oferta li {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 6px 28px;
+  padding: 20px 0;
+  border-top: 1px solid var(--linea);
+}
+
+.oferta li:last-child {
+  border-bottom: 1px solid var(--linea);
+}
+
+.oferta strong {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  color: var(--azul);
+}
+
+.oferta span {
+  color: var(--suave);
+}
+
+.texto + .oferta {
+  margin-top: 20px;
+}
+
+.subtitulo {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+}
+
+.sub {
+  margin: 44px 0 12px;
+  font-size: 1.4rem;
+}
+
+.aviso {
+  max-width: 760px;
+  margin-top: 24px;
+  border-left: 5px solid var(--amarillo);
+  padding-left: 20px;
+}
+
+.aviso p {
+  margin: 0;
+  color: var(--suave);
+}
+
+/* =========================================
+   GALERIA
+========================================= */
+
+.texto + .galeria {
+  margin-top: 28px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.galeria figure {
+  margin: 0;
+}
+
+.foto {
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, #DCE6F0, #C5D5E5);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--suave);
+  font-size: .95rem;
+  overflow: hidden;
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+a.foto {
+  text-decoration: none;
+}
+
+a.foto:hover img {
+  opacity: .9;
+}
+
+.galeria figcaption {
+  font-size: .92rem;
+  color: var(--suave);
+  padding-top: 6px;
+}
+
+/* =========================================
+   PREGUNTAS FRECUENTES
+========================================= */
+
+.faq {
+  max-width: 760px;
+}
+
+details {
+  border-top: 1px solid var(--linea);
+}
+
+details:last-child {
+  border-bottom: 1px solid var(--linea);
+}
+
+summary {
+  cursor: pointer;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--azul);
+  padding: 16px 0;
+}
+
+details p {
+  margin: 0 0 18px;
+  color: var(--suave);
+}
+
+/* =========================================
+   CONTACTO
+========================================= */
+
+.contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contacto dl {
+  margin: 0;
+}
+
+.contacto dt {
+  font-weight: 700;
+  color: var(--azul-oscuro);
+  margin-top: 14px;
+}
+
+.contacto dt:first-child {
+  margin-top: 0;
+}
+
+.contacto dd {
+  margin: 2px 0 0;
+  color: var(--suave);
+}
+
+.caja {
+  background: var(--papel);
+  border: 1px solid var(--linea);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.caja p {
+  margin: 0 0 16px;
+}
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.formulario {
+  margin-top: 40px;
+  max-width: 760px;
+  width: 100%;
+}
+
+.formulario label {
+  display: block;
+  font-weight: 700;
+  color: var(--azul-oscuro);
+  margin: 14px 0 4px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--texto);
+  background: var(--papel);
+  border: 1px solid var(--linea);
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.formulario textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 1px;
+  border-color: var(--azul);
+}
+
+.formulario .boton {
+  font: inherit;
+  font-weight: 700;
+  margin-top: 18px;
+}
+
+.estado {
+  margin: 14px 0 0;
+  font-weight: 700;
+}
+
+.estado.error {
+  color: #B3261E;
+}
+
+.estado.ok {
+  color: #1B6B3A;
+}
+
+/* =========================================
+   UBICACION Y MAPA
+========================================= */
+
+.ubicacion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.mapa {
+  border: 1px solid var(--linea);
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 16 / 7;
+  background: #DCE6F0;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.pasos {
+  padding-left: 22px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   NOTICIAS
+========================================= */
+
+.noticias {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 760px;
+}
+
+.noticias li {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 6px 28px;
+  padding: 20px 0;
+  border-top: 1px solid var(--linea);
+}
+
+.noticias li:last-child {
+  border-bottom: 1px solid var(--linea);
+}
+
+.noticias time {
+  font-weight: 700;
+  color: var(--azul-oscuro);
+  font-size: .95rem;
+}
+
+.noticias h3 {
+  margin: 0 0 6px;
+}
+
+.noticias p {
+  margin: 0;
+  color: var(--suave);
+}
+
+.mas {
+  margin: 20px 0 0;
+}
+
+/* =========================================
+   VISOR DE FOTOGRAFIAS
+========================================= */
+
+.visor {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  background: #0A1428;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 64px 24px;
+}
+
+.visor:target {
+  display: flex;
+}
+
+.visor-fondo {
+  position: absolute;
+  inset: 0;
+}
+
+.visor-fig {
+  position: relative;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.visor-fig img {
+  max-width: 100%;
+  max-height: calc(100vh - 140px);
+  max-height: calc(100dvh - 140px);
+  border-radius: 4px;
+  display: block;
+}
+
+.visor-fig figcaption {
+  color: #FFFFFF;
+  padding-top: 12px;
+  font-size: 1rem;
+}
+
+.visor-cerrar,
+.visor-ant,
+.visor-sig {
+  position: absolute;
+  text-decoration: none;
+  text-align: center;
+}
+
+.visor-cerrar {
+  top: 14px;
+  right: 16px;
+  background: var(--amarillo);
+  color: var(--azul-oscuro);
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 6px;
+}
+
+.visor-cerrar:hover {
+  background: #FFFFFF;
+}
+
+.visor-ant,
+.visor-sig {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 64px;
+  line-height: 62px;
+  background: rgba(255,255,255,.14);
+  color: #FFFFFF;
+  font-size: 2.2rem;
+  border-radius: 6px;
+}
+
+.visor-ant {
+  left: 8px;
+}
+
+.visor-sig {
+  right: 8px;
+}
+
+.visor-ant:hover,
+.visor-sig:hover {
+  background: rgba(255,255,255,.3);
+}
+
+/* =========================================
+   WHATSAPP
+========================================= */
+
 .whatsapp {
-    background: #25D366;
-    color: #073B1B;
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  background: #25D366;
+  color: #073B1B;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+
+.whatsapp:hover {
+  background: #FFFFFF;
+}
+
+.whatsapp:focus-visible {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   PIE DE PAGINA
+========================================= */
+
+footer {
+  background: var(--azul-oscuro);
+  color: #C9D6E3;
+  padding: 26px 0;
+  font-size: .95rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* =========================================
+   RESPONSIVE PARA TABLETS
+========================================= */
+
+@media screen and (max-width: 992px) {
+
+  .wrap {
+    width: calc(100% - 36px);
+  }
+
+  .hero .wrap {
+    grid-template-columns: 1fr 180px;
+    gap: 24px;
+  }
+
+  .escudo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .oferta li,
+  .noticias li {
+    grid-template-columns: 150px 1fr;
+    gap: 10px 16px;
+  }
+
+}
+
+/* =========================================
+   RESPONSIVE PARA CELULARES
+   MISMA DISTRIBUCION, MENOR TAMANO
+========================================= */
+
+@media screen and (max-width: 760px) {
+
+  html {
+    font-size: 14px;
+    scroll-padding-top: 100px;
+  }
+
+  .wrap {
+    width: calc(100% - 32px);
+  }
+
+  /* MENU */
+
+  header.top .wrap {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .marca {
+    font-size: .9rem;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+  }
+
+  nav a {
+    font-size: .82rem;
+  }
+
+  /* PORTADA */
+
+  .hero {
+    padding: 36px 0 40px;
+  }
+
+  .hero .wrap {
+    grid-template-columns: minmax(0, 1fr) 110px;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    line-height: 1.1;
+    margin-bottom: 14px;
+  }
+
+  .hero p {
+    font-size: .95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .escudo {
+    width: 110px;
+    height: 110px;
+    padding: 10px;
+  }
+
+  .boton {
+    padding: 10px 16px;
+    font-size: .9rem;
+  }
+
+  /* SECCIONES */
+
+  section {
+    padding: 42px 0;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  /* MISION Y VISION */
+
+  .dos {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 25px;
+  }
+
+  .dos > div {
+    padding-left: 12px;
+  }
+
+  /* OFERTA Y MATRICULA */
+
+  .oferta li,
+  .noticias li {
+    grid-template-columns: 110px 1fr;
+    gap: 8px 12px;
+    padding: 16px 0;
+  }
+
+  .oferta strong {
+    font-size: 1rem;
+  }
+
+  /* GALERIA */
+
+  .galeria {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .galeria figcaption {
+    font-size: .82rem;
+  }
+
+  /* CONTACTO */
+
+  .contacto {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .caja {
+    padding: 14px;
+  }
+
+  /* FORMULARIO */
+
+  .formulario {
+    width: 100%;
+  }
+
+  /* UBICACION */
+
+  .ubicacion {
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .mapa {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* WHATSAPP */
+
+  .whatsapp {
+    right: 10px;
+    bottom: 10px;
+    padding: 9px 13px;
+    font-size: .82rem;
+  }
+
+  /* VISOR */
+
+  .visor {
+    padding: 60px 12px 20px;
+  }
+
+  .visor-fig img {
+    max-height: 75dvh;
+    object-fit: contain;
+  }
+
+  .visor-ant,
+  .visor-sig {
+    width: 38px;
+    height: 50px;
+    line-height: 48px;
+    font-size: 1.8rem;
+  }
+
+  .visor-ant {
+    left: 4px;
+  }
+
+  .visor-sig {
+    right: 4px;
+  }
+
+  /* PIE */
+
+  footer {
+    padding: 22px 0;
+  }
+
+}
+
+/* =========================================
+   CELULARES PEQUENOS
+========================================= */
+
+@media screen and (max-width: 380px) {
+
+  .wrap {
+    width: calc(100% - 24px);
+  }
+
+  .hero .wrap {
+    grid-template-columns: minmax(0, 1fr) 85px;
+    gap: 8px;
+  }
+
+  .hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .hero p {
+    font-size: .8rem;
+  }
+
+  .escudo {
+    width: 85px;
+    height: 85px;
+  }
+
+  .dos,
+  .contacto,
+  .ubicacion {
+    grid-template-columns: 1fr;
+  }
+
+  .oferta li,
+  .noticias li {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .whatsapp {
+    padding: 8px 11px;
+    font-size: .75rem;
+  }
+
 }

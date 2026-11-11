@@ -1,4 +1,3 @@
-/* ---------- Formulario: envía el mensaje por WhatsApp ---------- */
 const WHATSAPP = '50584950711';
 const form = document.getElementById('form-contacto');
 const estado = document.getElementById('form-estado');
@@ -27,7 +26,6 @@ form.addEventListener('submit', e => {
   form.reset();
 });
 
-/* ---------- Menú en celular ---------- */
 const botonMenu = document.querySelector('.menu-btn');
 const menu = document.getElementById('menu');
 
@@ -55,11 +53,9 @@ if (botonMenu && menu) {
     }
   });
 
-  // Si se agranda la ventana, se restablece el menú
   window.matchMedia('(min-width: 1001px)').addEventListener('change', cerrarMenu);
 }
 
-/* ---------- Visor de fotos: teclado (← → y Esc) ---------- */
 document.addEventListener('keydown', e => {
   const visor = document.querySelector('.visor:target');
   if (!visor) return;

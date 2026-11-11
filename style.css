@@ -112,3 +112,37 @@ footer p{margin:0}
   .visor-fig img{max-height:calc(100vh - 220px);max-height:calc(100dvh - 220px)}
   .visor-ant,.visor-sig{width:40px;height:52px;line-height:50px;top:auto;bottom:16px;transform:none}
 }
+
+
+/* Matrícula: subtítulo y aviso */
+.subtitulo{margin:0 0 12px;font-size:1.4rem}
+.aviso{max-width:760px;margin-top:24px;border-left:5px solid var(--amarillo);padding-left:20px}
+.aviso p{margin:0;color:var(--suave)}
+
+/* Noticias (activar la sección en el HTML cuando haya noticias reales) */
+.noticias{list-style:none;margin:0;padding:0;max-width:760px}
+.noticias li{display:grid;grid-template-columns:190px 1fr;gap:6px 28px;padding:20px 0;border-top:1px solid var(--linea)}
+.noticias li:last-child{border-bottom:1px solid var(--linea)}
+.noticias time{font-weight:700;color:var(--azul-oscuro);font-size:.95rem}
+.noticias h3{margin:0 0 6px}
+.noticias p{margin:0;color:var(--suave)}
+.mas{margin:20px 0 0}
+
+/* Formulario de contacto */
+.formulario{margin-top:40px;max-width:760px}
+.formulario label{display:block;font-weight:700;color:var(--azul-oscuro);margin:14px 0 4px}
+.formulario input,.formulario textarea{width:100%;font:inherit;color:var(--texto);background:var(--papel);border:1px solid var(--linea);border-radius:6px;padding:10px 12px}
+.formulario textarea{min-height:130px;resize:vertical}
+.formulario input:focus,.formulario textarea:focus{outline:3px solid var(--amarillo);outline-offset:1px;border-color:var(--azul)}
+.formulario .boton{border:0;cursor:pointer;font:inherit;font-weight:700;margin-top:18px}
+.estado{margin:14px 0 0;font-weight:700}
+.estado.error{color:#B3261E}
+.estado.ok{color:#1B6B3A}
+
+.whatsapp{position:fixed;right:16px;bottom:16px;z-index:10;background:#25D366;color:#073B1B;font-weight:700;text-decoration:none;padding:12px 18px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.whatsapp:hover{background:#fff}
+.whatsapp:focus-visible{outline:3px solid var(--amarillo);outline-offset:3px}
+
+@media (max-width:760px){
+  .noticias li{grid-template-columns:1fr}
+}
